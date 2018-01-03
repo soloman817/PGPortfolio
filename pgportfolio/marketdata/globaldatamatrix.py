@@ -119,6 +119,12 @@ class HistoryManager:
         finally:
             connection.commit()
             connection.close()
+        # xiang = panel.major_xs('ETH')
+        # xianglen = len(xiang)
+        # path = '/Users/xiang/Documents/temp.h5'
+        # xiang.to_hdf(path, 'full_data')
+        # xiang[:32281].to_hdf(path, 'train_data')
+        # xiang[32281:].to_hdf(path, 'test_data')
         return panel
 
     # select top coin_number of coins by volume from start to end

@@ -14,6 +14,7 @@ class NNAgent:
                                  config["input"]["window_size"],
                                  config["layers"],
                                  device=device)
+        self.net = self.__net
         self.__global_step = tf.Variable(0, trainable=False)
         self.__train_operation = None
         self.__y = tf.placeholder(tf.float32, shape=[None,
